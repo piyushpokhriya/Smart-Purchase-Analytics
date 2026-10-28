@@ -1,0 +1,145 @@
+.dashboard-welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 28px;
+    border-radius: 15px;
+    background: linear-gradient(120deg, #dbeafe, #eff6ff);
+}
+
+.welcome-label {
+    margin: 0 0 12px;
+    color: #1d4ed8;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-welcome h2 {
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.dashboard-welcome p:last-child {
+    max-width: 580px;
+    margin: 10px 0 0;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.welcome-decoration {
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border: 1px solid rgba(29, 78, 216, 0.18);
+    border-radius: 25px;
+    color: #1d4ed8;
+    font-size: 24px;
+    font-weight: 800;
+    transform: rotate(8deg);
+}
+
+.stats-section,
+.modules-section {
+    margin-bottom: 32px;
+    scroll-margin-top: 24px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.modules-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.modules-heading .section-heading {
+    margin-bottom: 7px;
+}
+
+.modules-subtitle {
+    margin: 0;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.dashboard-footer {
+    padding: 20px 0 5px;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 11px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 760px) {
+    .app-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .sidebar-brand {
+        padding-bottom: 18px;
+    }
+
+    .sidebar-footer {
+        display: none;
+    }
+
+    .main-content {
+        padding: 20px 15px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-welcome {
+        padding: 22px;
+    }
+
+    .dashboard-welcome h2 {
+        font-size: 20px;
+    }
+
+    .welcome-decoration {
+        display: none;
+    }
+
+    .modules-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 420px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
