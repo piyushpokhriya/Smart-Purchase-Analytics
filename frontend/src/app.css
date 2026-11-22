@@ -1,9 +1,12 @@
+
+/* Global Reset */
 * {
     box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -11,18 +14,32 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f7fb;
     color: #172033;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Common Elements */
 button,
 input,
-select {
+select,
+textarea {
     font: inherit;
+}
+
+button {
+    -webkit-tap-highlight-color: transparent;
 }
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Main Application */
 #root {
     min-height: 100vh;
 }
@@ -30,19 +47,73 @@ a {
 .app-layout {
     display: flex;
     min-height: 100vh;
+    width: 100%;
 }
 
 .main-content {
     flex: 1;
     min-width: 0;
     padding: 30px;
+    overflow-x: hidden;
 }
 
+/* Common Headings */
 .section-heading {
     margin: 0 0 18px;
+    color: #172554;
     font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 .muted-text {
     color: #64748b;
+    line-height: 1.6;
+}
+
+/* Selection */
+::selection {
+    background: #bfdbfe;
+    color: #172554;
+}
+
+/* Scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 transparent;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Responsive Layout */
+@media (max-width: 760px) {
+    .main-content {
+        padding: 22px 16px;
+    }
+
+    .section-heading {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 420px) {
+    .main-content {
+        padding: 18px 13px;
+    }
 }

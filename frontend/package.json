@@ -12,7 +12,8 @@
   "dependencies": {
     "lucide-react": "^1.62.0",
     "react": "^19.3.0",
-    "react-dom": "^19.3.0"
+    "react-dom": "^19.3.0",
+    "recharts": "^3.11.0"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
